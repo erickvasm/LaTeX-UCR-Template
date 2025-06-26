@@ -1,0 +1,76 @@
+\section{Sección Uno}
+\label{sec:Seccion Uno}
+
+Las secciones se encuentran en la carpeta “sections”, la idea de esto es poder organizar de mejor manera cada sección del documento. Así se evita la gran cantidad de código en un solo archivo. En el archivo “main.tex” se encuentra únicamente los paquetes, portada, llamada de secciones y bibliografía.
+
+Cada sección tiene un “label” que puede ser llamado así: \textbf{\ref{sec:Seccion Dos}}
+
+\subsection{Esto es una Sub-sección}
+
+A continuación se presenta un ejemplo de una imagen con respectivo caption. El texto realiza sangría de forma automática. 
+
+\vspace{1cm}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale = 0.2]{images/thumbnail_logo1.png}
+\caption{Logo UCR, sede Guanacaste}
+\end{figure}
+
+%----------------------------------------------------------------------
+\subsection{Segunda Sub-sección}
+
+Aquí se presenta una caja personalizada, el título de “Teorema” y color se pueden cambiar en el “main.text”. 
+
+\vspace{1em}
+
+\begin{example}[label={ex:se}]{Ejemplo de caja}
+
+Esto es un ejemplo de una caja personalizada. Se puede modificar los colores y el título. 
+$$ g(x) =  \langle x, Ax\rangle - 2 \langle x,b \rangle  $$
+ 
+\end{example}
+
+
+\subsubsection{Esto es una Sub-Sub-sección}
+A continuación se presenta una tabla con su respectivo caption. Se puede personalizar el color y la cantidad de celdas.
+
+\vspace{1em}
+
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{ | c | c | c |}
+\hline \cellcolor[HTML]{f2f2ff} Título  &  \cellcolor[HTML]{f2f2ff} Título & \cellcolor[HTML]{f2f2ff} Título \\ \hline
+1 & 2 & 3 \\ \hline
+Intersección & En eje X con la recta & En eje X con la parábola \\ \hline
+\end{tabular}
+\caption{Ejemplo de una tabla}
+\end{center}
+\end{table}
+
+Esto es un ejemplo de como se pueden realizar ítems, de igual forma estos se pueden personalizar, según el tipo de numeración.
+
+\begin{itemize}
+    \item[1)] Item número uno
+    \item[2)] Item número dos
+\end{itemize}
+
+En cada sección hay un salto de página. Es por esto que la sección 2 aparece hasta la siguiente página. Se puede quitar en el “main.tex”. El estilo de referencia se puede cambiar en el archivo “main.tex”.
+
+Esto es un ejemplo de como se pueden usar tablas personalizadas. Esta es una tabla que simula ser una división. 
+
+
+Ejemplo de división:
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{  c  c  c  c | c}
+
+1 & -2 & 0 & -5 & 2.7333\\
+  & 2.7333 & 2.004 & 5.4787\\ \hline
+1 & 0.7333 & 2.004 & 0.4787 \cellcolor[HTML]{E3F772} & 
+
+\end{tabular}
+
+\end{center}
+\end{table}

@@ -1,0 +1,29 @@
+\section{Sección Dos}
+\label{sec:Seccion Dos}
+
+Las bibliografías se administran en el archivo “references.bib”. Para llamar una cita de la bibliografía se realiza así: \textbf{\cite{einstein}}
+
+Esto es un algoritmo, se presenta en ingles pero de igual forma la hay en español. 
+
+Ejemplo de algoritmo:
+
+\begin{algorithm}
+
+    \caption{Algoritmo de Euclides}
+    \label{euclides}
+    \begin{algorithmic}[1]
+       \Procedure{Euclides}{$a,b$} \Comment{Encuentra el máximo común divisor entre $a$ y $b$}
+        \State $r\gets a \bmod b$
+        \While{$r\not=0$} \Comment{Si $r$ es cero ya tendríamos la respuesta}
+            \State $a \gets b$
+            \State $b \gets r$
+            \State $r \gets a \bmod b$
+        \EndWhile\label{euclidesfinwhile}
+        \State \textbf{return} $b$\Comment{El M.C.D es $b$}
+        
+    \EndProcedure
+    \end{algorithmic}
+    
+\end{algorithm}
+
+Se puede obtener más detalles de como realizar un Pseudocódigo en el siguiente enlace: \textbf{{\footnotesize \url{https://tecdigital.tec.ac.cr/revistamatematica/Libros/LaTeX/MoraW_BorbonA_LibroLaTeX.pdf}}}

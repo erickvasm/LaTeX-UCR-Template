@@ -1,0 +1,22 @@
+\begin{frame}{Algoritmos}
+\subsection{Algoritmos}
+
+Los algoritmos se realzan con el paquete \textbf{algorithm2e}
+
+\begin{algorithm}[H]
+$a_0=y_0$\;
+$s=\alpha_j-\alpha_0$\;
+$f=x_j-x_0$\;
+\For{$j=1$ \KwTo $m$
+}{  $s=y_j-\alpha_0;\;$ $f=x_j-x_0$\;
+\For{$k=1$ \KwTo $j-1$}
+    {$s=s-\alpha_k \cdot f$\;
+     $f=(x_j-x_k)\cdot f$\;
+    }
+    \Return $\alpha_j=s/f$ \;
+}
+\end{algorithm}
+
+\textbf{{\footnotesize \url{https://tecdigital.tec.ac.cr/revistamatematica/Libros/LaTeX/MoraW_BorbonA_LibroLaTeX.pdf}}}
+
+\end{frame}

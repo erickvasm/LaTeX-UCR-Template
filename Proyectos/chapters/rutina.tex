@@ -1,0 +1,40 @@
+\chapter{Rutina en Excel}
+\label{ch:rutina}
+
+La herramienta que utilizaremos Excel, dado que es una herramienta perfecta para el análisis de datos para fines estadístico y matemático. Se utilizará un derivado del paquete recomendado por el profesor, el cual R4XCL y real statistics para el análisis de componentes principales. Estos paquetes pueden ser desargados \href{www.http://cipadla.com/}{Aquí}.
+
+Cabe destacar que estos paquetes utilizan el algoritmo correspondiente de PCA, el cual se explicara a continuación: 
+
+\begin{lstlisting}[language=python, caption=Pseudocódigo PCA iterativo ,label={lst:algoritmoIte}]
+1. Constantes iniciales: cota = 1·10-6
+2. Partimos de la matriz de datos X
+3. Se elimina la media de X
+4. for i = k componentes principales
+5. Inicializar v aleatoriamente
+6. difuv = 1
+7. while dif uv > cota
+8. Se halla u mediante
+    u = min (u^T X^T Xu−2 v^T X^T Xu)
+9. Se halla v mediante: SVD de X
+10. Se actualiza la diferencia entre u y v
+11. end
+12. Se normaliza u y se guarda en U
+13. Se deflacta X: 
+    X = X - uT
+14. end
+15. Se calculan las componentes principales mediante Y = UT
+
+\end{lstlisting}
+
+
+Segun las palabras del autor Andrés Sánchez, en su tesis de fin de proyecto de carrera nos explica que el algoritmo PCA iterativo resulta de adaptar la implementación del PCA recursivo. Por lo que se hallarán los vectores individualmente. Por cada uno de ellos y a medida que se hallan se guardan en la matriz. El objetivo es minimizar la diferencia entre ui y vi en cada
+componente. Hay que tener en cuenta que a medida que se obtienen los vectores se debe de eliminar la
+información que contienen de los datos en el nuevo espacio y que el siguiente vector sea independiente de las anteriores 
+
+\begin{quote}
+    Otro factor a tener en cuenta es el coste computacional. En el PCA Iterativo se realizan p ejecuciones del PCA, una por cada componente principal que se quiera hallar. Cada una de estas ejecuciones tendrá un coste de O(D3) para el cálculo de cada u mediante mínimos cuadrados y un coste de O(13) para el cálculo de v mediante la SVD. \cite{andresSanchesMangas}
+\end{quote}
+
+Es importante mencionar el nivel de complejidad que tiene este algoritmo para el procesar de una computadora, dado que si es de un coste muy alto como el exponencial, no es muy indicado implementarlo por su poca eficiencia. 
+
+

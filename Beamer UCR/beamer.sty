@@ -1,0 +1,69 @@
+\usepackage{hyperref}
+\usepackage{charter}
+\usepackage{tikz}
+\usepackage{graphicx, svg}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usefonttheme[onlymath]{serif}
+\definecolor{ucrColor}{rgb}{0,0.752941,0.952941}% celeste
+
+
+%% CONFIG TITULO
+\setbeamerfont{subtitle}{size=\scriptsize}
+\setbeamertemplate{title page}{
+    \begin{tikzpicture}[remember picture, overlay]
+    \fill[ucrColor] (current page.south west) rectangle (current page.north east);
+    \draw[ucrColor, line width=1ex] (current page.north west) -- (current page.north east);
+    \node[anchor=center, align=left, text width=\textwidth, inner sep=0pt, text=white, text height=2.5ex] at (current page.center) {
+        \usebeamerfont{title}
+        %% IMAGEN DE GIRASOL, SE PUDE QUITAR
+        \put(-170,78){\includegraphics[width=95pt,height=70pt]{Imagenes/girasol.png}}
+        %% ESCUDO UCR
+        \put(-10,40){\includegraphics[scale=.23]{Imagenes/logo.png}}
+            {\centering \textbf{\inserttitle}\\[0.5cm]}
+            
+        \usebeamerfont{subtitle}
+            {\centering\textbf{\insertauthor}\\[0.2cm]}
+            {\centering\insertdate\\[0.2cm]}
+    };
+    %% LOGO CARRERA
+    \node[anchor=south west, inner sep=0pt, xshift=28.0ex, yshift=5.2ex] at (current page.south west) {\includegraphics[width=55pt,height=30pt]{Imagenes/CIE guanacaste.png}};
+    \end{tikzpicture}
+}
+
+% COLOR DE HEADLINE
+\setbeamertemplate{headline}{
+    \leavevmode
+    \hbox{
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{}
+        \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1filll}{}
+    \end{beamercolorbox}
+  }
+}
+
+
+
+
+% COLOR DE TITULOS Y SUB TUTITULOS
+\setbeamercolor*{titlelike}{use=structure, fg=ucrColor, bg=white}
+
+% FOOTLINE
+\setbeamercolor*{footline in head/foot}{use=structure, fg=black, bg=ucrColor}
+\setbeamertemplate{footline}{%
+    \usebeamertemplate*{headline}
+    \begin{beamercolorbox}[ht=8.25ex, dp=1ex]{footline in head/foot}
+    \hspace{1.2em}\includegraphics[width=50pt,height=23pt]{Imagenes/CIE guanacaste.png}\quad
+    \hfill
+    \vbox{
+      \par
+      \hbox{
+        \usebeamertemplate*{navigation symbols}
+      }
+    }
+    {\usebeamercolor[white]{frame number}\insertframenumber / \inserttotalframenumber}
+    \hspace{.5em}
+    \end{beamercolorbox}%
+}
+
+\setbeamercolor{itemize item}{fg=ucrColor}
+\setbeamertemplate{sidebar right}{}
