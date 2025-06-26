@@ -93,15 +93,6 @@ Las coordenadas de los valores $i$-ésimo son:
  $$=a_{1}^{1}x_{i1}+...+a_{2}^{1}x_{ij},+...+,a_{m}^{1}x_{im}$$
  $$=Xa^1$$
  
- \begin{figure}[H]
-        \centering
-        \caption{Planteamiento gráfico}
-        \includegraphics[width=0.7\textwidth]{figures/grafico.JPG}
-        \label{graficoPitagoras}
-\end{figure}
-\begin{center}
-    [Fuente:  Análisis de componentes principales]\cite{rojas2009analisis}
-\end{center}
 
 De la imagen \ref{graficoPitagoras} haciendo uso del teorema de 
 Pitagoras se puede deducir $d^2(i,0)=(C_{i}^{1})^2+d^2(i,D_1)$, por lo que sumando sobre $i$ a ambos lados y multiplicando por $1/n$ se tiene que:
@@ -189,76 +180,6 @@ máxima.
  
  \textbf{Ejemplo 5} En el ejemplo de las notas escolares, el primer plano principal está generado por $c^{1}$ y $c^{2}$ dados en la Tabla 3.3. El plano principal es dado en la Figura 3.2. En la tabla 3.3 se puede ver que las coordenadas de Pedro son /0.67 y 1.64, y las de Sonia son 3.04 y 1.25, que son los valores usados para representarlos en el plano principal.
  
- \begin{figure}[H]
-        \centering
-        \caption{Primer plano principal para la tabla de notas escolares}
-        \includegraphics[width=0.8\textwidth]{figures/plano.png}
-        \label{ejemplo5}
-\end{figure}
-\begin{center}
-    [Fuente:  Análisis Multivariado de Datos, Métodos y Aplicaciones]\cite{CastilloGonzalez}
-\end{center}
-
- 
- \subsection{Círculos de correlaciones}
- Aquí se pueden apreciar las agrupaciones de variables y su comportamiento respecto de las componentes principales.  
- 
- Los círculos de correlaciones se obtiene calculando el coeficiente de correlación lineal entre cada $x^\textit{j}$ en $c^{k}$. Por lo tanto:
-\begin{center}
-    
-    Coordenada de la variable $x^\textit{j}$ en $ c^{k}: r(x^\textit{j},c^{k})$
-    
-\end{center} 
- 
-\textbf{Ejemplo 6} En la tabla de notas escolares, las correlaciones entre las variables originales y las dos primeros componentes principales son:
-
- \begin{figure}[H]
-        \centering
-        \caption{Siguiendo el procedimiento descrito anteriormente}
-        \includegraphics[width=0.8\textwidth]{figures/circulo.png}
-        \label{ejemplo6}
-\end{figure}
-\begin{center}
-    [Fuente:  Análisis Multivariado de Datos, Métodos y Aplicaciones]\cite{CastilloGonzalez}
-\end{center}
-
- 
- Por último, las dos gráficas anteriores son complementarias. Se puede apreciar el círculo de correlaciones permite interpretar las posiciones relativas de los individuos.
- Así mismo, se debe tener presente que estos no son más que simplificaciones de los hechos observados.
- 
- 
- \section{Interpretación de los resultados}
- 
-
-Como lo explica Joaquín\cite{interpretacion},
-Una forma intuitiva de entender el proceso de PCA consiste en interpretar las componentes principales desde un punto de vista geométrico. Supóngase un conjunto de observaciones para las que se dispone de dos variables (X1, X2). El vector que define la primera componente principal (Z1) sigue la dirección en la que las observaciones varían más (linea roja). La proyección de cada observación sobre esa dirección equivale al valor de la primera componente para dicha observación. 
-
-Como se puede observar en la siguiente imagen,
-
- \begin{figure}[H]
-        \centering
-        \caption{Siguiendo el procedimiento descrito, se pueden apreciar más datos}
-        \includegraphics[width=0.8\textwidth]{figures/interpretacionDatos.PNG}
-        \label{ilustracion vector Z1 }
-\end{figure}
-\begin{center}
-    [Fuente:  Análisis Multivariado de Datos, Métodos y Aplicaciones]\cite{interpretacion}
-\end{center}
-
-La segunda componente $(Z2)$ sigue la segunda dirección en la que los datos muestran mayor varianza y que no está correlacionada con la primera componente. La condición de no correlación entre componentes principales equivale a decir que sus direcciones son perpendiculares.
-
-
- \begin{figure}[H]
-        \centering
-        \caption{Trayectoria de la segunda componente}
-        \includegraphics[width=0.8\textwidth]{figures/interpretacionDatos2.PNG}
-        \label{ilustracion vector Z2 }
-\end{figure}
-\begin{center}
-    [Fuente:  Análisis Multivariado de Datos, Métodos y Aplicaciones]\cite{interpretacion}
-\end{center}
-
-
  Para la interpretación de componentes, se debe de tener en cuenta la subjetividad del sujeto. 
  Es el asunto más importante de un Análisis de Componentes Principales es la interpretación de los resultados. A pesar de que, como en toda técnica estadística, en la interpretación hay mucho de arte y la experiencia juega un papel importante, se pueden sugerir algunas directrices que pueden ayudar a encontrar los hechos más sobresalientes en los resultados.
 
